@@ -1,0 +1,116 @@
+:root {
+  --Dark-Blue: hsl(240, 38%, 20%);
+  --Grayish-Blue: hsl(240, 18%, 77%);
+
+}
+
+* {
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size : 16px;
+  height: 100vh;
+}
+
+.testimonals {
+ width: 80%;
+ margin: 50px auto;
+}
+
+
+.testimonals .card {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 50px 20px;
+  background: url(/images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 40%;
+  box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Details and Content */
+
+.testimonals .card .card__content {
+  padding-left: 60px;
+}
+
+.testimonals .card .card__content p {
+  color: var(--Dark-Blue);
+  font-weight: 300;
+  font-size: 24px;
+  padding-top: 50px;
+  background-image: url(/images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-size: 19%;
+  background-position-x: 55px;
+}
+
+.testimonals .card .author__details {
+  margin-top: 40px;
+  display: flex;
+}
+
+.testimonals .card .author__details h4:last-of-type {
+  color : var(--Grayish-Blue);
+  margin-left: 20px;
+  font-weight: 400;
+}
+
+
+/* Image */
+.testimonals .card .card__image {
+  position: relative;
+  left: -100px;
+  padding: 50px;
+  z-index: -1;
+  background-image: url(/images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
+
+.testimonals .card .card__image img{
+  
+  box-shadow: 0px 20px 0px rgba(0, 0, 0, 0.2);
+  max-height: 400px;
+  position: relative;
+}
+
+/* Buttons */
+.testimonals .card .buttons {
+  display: flex;
+  padding : 15px 30px;
+  background-color: #fffff7;
+  border-radius: 100px;
+  justify-content: space-between;
+  position: absolute;
+  top: 84%;
+  left: 50%;
+  z-index: 22;
+}
+
+.buttons .prevButton {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+
+.buttons .nextButton {
+  cursor: pointer;
+}
+
+@media (max-width: 650px) {
+  .testimonals .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonals .card .card__image {
+    left: 0;
+  }
+}
